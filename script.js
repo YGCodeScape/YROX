@@ -28,5 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     splitTextIntoSpan(".header h1");
 
+    menuToggle.addEventListener("click", () => {
+        if(isAnimating) return;
 
+        if(menuToggle.classList.contains("closed")) {
+            menuToggle.classList.remove("closed")
+            menuToggle.classList.add("opened")
+            isAnimating = true;
+        }
+        else {
+            menuToggle.classList.remove("opened")
+            menuToggle.classList.add("closed")
+
+            isAnimating = true
+        }
+
+    })
 });

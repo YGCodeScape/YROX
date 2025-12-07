@@ -54,6 +54,9 @@ html, body {
 .menu-toggle.opened {
     width: 60px;
 }
+.menu-toggle.closed {
+    width: 0;
+}
 .menu-copy {
     position: absolute;
     top: 50%;
@@ -74,8 +77,12 @@ html, body {
     left: 20px;
 }
 .menu-toggle.opened .menu-copy {
+    opacity: 1;
+}
+.menu-toggle.closed .menu-copy {
     opacity: 0;
 }
+
 .menu-toggle-icon {
     position: absolute;
     right: 0;
@@ -93,6 +100,10 @@ html, body {
 }
 .menu-toggle.opened .menu-toggle-icon {
     clip-path: circle(50% at 50% 50%);
+    transform: scale(1.125);
+}
+.menu-toggle.closed .menu-toggle-icon {
+    clip-path: circle(35% at 50% 50%);
     transform: scale(1.125);
 }
 
@@ -114,6 +125,10 @@ html, body {
     top: 50%;
     opacity: 1;
 }
+.menu-toggle.closed .hamburger {
+    top: 50%;
+    opacity: 1;
+}
 .menu-bar {
     position: absolute;
     width: 15px;
@@ -128,10 +143,10 @@ html, body {
 .menu-bar-bottom {
     transform: translateY(3px);
 }
-.menu-toggle.opened .menu-bar-top {
+.menu-toggle.closed .menu-bar-top {
     transform: translateY(0) rotate(45deg) scaleX(1.05);
 }
-.menu-toggle.opened .menu-bar-bottom {
+.menu-toggle.closed .menu-bar-bottom {
     transform: translateY(0) rotate(-45deg) scaleX(1.05);
 }
 
