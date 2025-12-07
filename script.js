@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener("click", () => {
 
         if(isAnimating == false) {
-            menuToggle.classList.remove("opened")
             menuToggle.classList.add("closed")
 
             gsap.to(menu, {
@@ -87,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         else {
             menuToggle.classList.remove("closed")
-            menuToggle.classList.add("opened")
 
             gsap.to(menu, {
                 clipPath : "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
