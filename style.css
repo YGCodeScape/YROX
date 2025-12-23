@@ -11,7 +11,7 @@
 html, body {
     width: 100%;
     height: 100vh;
-    background: url(./Assets/product.avif) no-repeat;
+    background: url(./Assets/watch\ product.png) no-repeat;
     background-position: center;
     background-size: cover;
     font-family: var(--classic-font);
@@ -32,7 +32,7 @@ html, body {
      font-weight: lighter;
 }
 .logo a {
-    color: #000;
+    color: #ffffff;
 }
 .menu-logo a {
     color: #fff;
@@ -44,7 +44,7 @@ html, body {
     right: 2rem;
     width: 120px;
     height: 60px;
-    background-color: #0f0f0f;
+    background-color: #e2e2e2;
     border-radius: 8em;
     transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform-origin: right;
@@ -62,7 +62,7 @@ html, body {
     top: 50%;
     left: 30px;
     transform: translateY(-50%);
-    color: #fff;
+    color: #000;
     transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 1;
     opacity: 1;
@@ -251,11 +251,76 @@ html, body {
     transform-origin: bottom;
 }
 
+/* hero text section */
+ .hero-text {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: rgba(240, 240, 240, 1);
+}
+
+.hero-content h5 {
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: var(--default-font);
+}
+
+.hero-content p {
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-transform: capitalize;
+}
+
+.hero-btn {
+    padding: 0.9rem 2.2rem;
+    border: 1px solid #fff;
+    background: transparent;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: rgba(240, 240, 240, 1);
+}
+
+.hero-btn:hover {
+    background: #f82d2d;
+    color: rgb(0, 0, 0);
+}
+
+
+
 @media (max-width: 786px) {
     .col-1 {
         flex: 2;
         align-items: flex-start;
+        padding: 6.5em 2em 2em 2em;
     }
+    .col-2 {
+        padding: 1.4em 2em 1em 2em;
+    }
+    .menu {
+        flex-direction: column;
+    }
+
     .link a {
         font-size: 30px;
     }
